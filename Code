@@ -4,6 +4,7 @@ from scipy import stats
 file = '2019volleyball.csv'
 newData=pds.read_csv(file)
 
+print("Hello! Welcome to Percentile Finder, where you can find your percentile from 30 volleyball players.")
 userInputH=(input("What is your height(cm)?"))
 userInputW=(input("What is your weight(kg)?"))
 userInputS=(input("What is your spike(cm)?"))
