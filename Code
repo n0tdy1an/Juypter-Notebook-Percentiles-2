@@ -1,0 +1,20 @@
+import pandas as pds
+import numpy
+from scipy import stats
+file = '2019volleyball.csv'
+newData=pds.read_csv(file)
+
+userInputH=(input("What is your height(cm)?"))
+userInputW=(input("What is your weight(kg)?"))
+userInputS=(input("What is your spike(cm)?"))
+userInputB=(input("What is your block(cm)?"))
+
+pHei=((newData["Height"]<= userInputH).mean()*100).round(2)
+pWei=((newData["Weight"]<= userInputW).mean()*100).round(2)
+pSpi=((newData["Spike"]<= userInputS).mean()*100).round(2)
+pBlo=((newData["Block"]<= userInputB).mean()*100).round(2)
+
+print("Height Percentile:",pHei)
+print("Weight Percentile:", pWei)
+print("Spike Percentile:",pSpi)
+print("Block Percentile:",pBlo)
